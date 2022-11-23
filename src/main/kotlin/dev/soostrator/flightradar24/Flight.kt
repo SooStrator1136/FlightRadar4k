@@ -6,7 +6,6 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.*
-import println
 
 /**
  * Class describing a flight.
@@ -39,7 +38,7 @@ class Flight internal constructor(val id: String, info: JsonArray) {
     init {
         fun getChecked(index: Int) = if (index >= info.size) {
             Int.MAX_VALUE.toString()
-        } else info[index]!!.jsonPrimitive.content.ifBlank { Int.MAX_VALUE.toString() }
+        } else info[index].jsonPrimitive.content.ifBlank { Int.MAX_VALUE.toString() }
 
         icao = getChecked(0)
         latitude = getChecked(1).toFloat()
