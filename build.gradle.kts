@@ -12,7 +12,7 @@ version = "1.0"
 repositories.mavenCentral()
 
 dependencies {
-    implementation("io.ktor:ktor-client-core:2.2.4")
+    implementation("io.ktor:ktor-client-core:2.3.1")
     implementation("io.ktor:ktor-client-cio:2.2.4")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
 
